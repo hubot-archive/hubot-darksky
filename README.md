@@ -14,6 +14,11 @@ Add **hubot-darksky** to your `external-scripts.json`:
 ["hubot-darksky"]
 ```
 
+## Configuration
+- `HUBOT_DARK_SKY_API_KEY` an api key from [developer.forecast.io](https://developer.forecast.io)
+- `HUBOT_DARK_SKY_DEFAULT_LOCATION` if unset, `weather` commands without a location will be ignored
+- `HUBOT_DARK_SKY_SEPARATOR` a configurable line separator for responses.  defaults to "\n"
+
 ## Sample Interaction
 ```
 user> hubot: weather portland
