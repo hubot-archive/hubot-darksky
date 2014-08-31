@@ -1,35 +1,27 @@
-# Hubot Example
+# Hubot Dark Sky
 
-An example script package for Hubot
+A script to grab the forecast information from Dark Sky for Hubot
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-example.png)](https://travis-ci.org/hubot-scripts/hubot-example)
+[![Build Status](https://travis-ci.org/hubot-scripts/hubot-darksky.png)](https://travis-ci.org/hubot-scripts/hubot-darksky)
 
-## Directory Structure
+## Installation
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+Run `npm install --save hubot-darksky`
 
-### script
+Add **hubot-darksky** to your `external-scripts.json`:
 
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
+```json
+["hubot-darksky"]
+```
 
-### src
+## Sample Interaction
+```
+Hubot> hubot: weather portland
+Hubot> Weather for Portland, OR, USA
+Currently: Mostly Cloudy 19.9°C/68°F
+Today: Partly cloudy until this evening.
+Coming week: Drizzle on Sunday, with temperatures bottoming out at 21°C/70°F on Tuesday.
+```
 
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
-
-### test
-
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
-
-## Advantages of Building a Package
-
-Some of the advantages of building an npm package for your hubot script(s) are:
-
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+## Sources
+[darksky.coffee from hubot-scripts](https://github.com/github/hubot-scripts/blob/master/src/scripts/darksky.coffee) by [kyleslattery](https://github.com/kyleslattery)
