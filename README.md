@@ -16,7 +16,7 @@ Add **hubot-darksky** to your `external-scripts.json`:
 
 ## Sample Interaction
 ```
-Hubot> hubot: weather portland
+user> hubot: weather portland
 Hubot> Weather for Portland, OR, USA
 Currently: Mostly Cloudy 19.9°C/68°F
 Today: Partly cloudy until this evening.
