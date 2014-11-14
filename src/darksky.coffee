@@ -41,7 +41,7 @@ module.exports = (robot) ->
           lng = result.results[0].geometry.location.lng
           darkSkyMe msg, lat,lng , options.separator, (darkSkyText) ->
             response = "Weather for #{result.results[0].formatted_address}#{options.separator}#{darkSkyText}"
-              .replace /(\d+\.?\d*)°C/g, (match) ->
+              .replace /-?(\d+\.?\d*)°C/g, (match) ->
                 centigrade = match.replace /°C/, ''
                 match = Math.round(centigrade*10)/10 + '°C/' + Math.round(centigrade * (9/5) + parseInt(32, 10)) + '°F'
             msg.send response
