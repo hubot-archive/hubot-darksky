@@ -50,7 +50,7 @@ module.exports = (robot) ->
           msg.send "Couldn't find #{location}"
 
 darkSkyMe = (msg, lat, lng, separator, cb) ->
-  url = "https://api.forecast.io/forecast/#{process.env.HUBOT_DARK_SKY_API_KEY}/#{lat},#{lng}/?units=si"
+  url = "https://api.darksky.net/forecast/#{process.env.HUBOT_DARK_SKY_API_KEY}/#{lat},#{lng}/?units=si"
   msg.http(url)
     .get() (err, res, body) ->
       result = JSON.parse(body)
