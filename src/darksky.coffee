@@ -7,6 +7,7 @@
 # Configuration
 #   HUBOT_DARK_SKY_API_KEY
 #   HUBOT_DARK_SKY_DEFAULT_LOCATION
+#   HUBOT_DARK_SKY_GOOGLE_MAPS_GEOCODING_API_KEY
 #   HUBOT_DARK_SKY_SEPARATOR (optional - defaults to "\n")
 #
 # Commands:
@@ -29,8 +30,9 @@ module.exports = (robot) ->
     unless options.separator
       options.separator = "\n"
 
-    googleurl = "http://maps.googleapis.com/maps/api/geocode/json"
-    q = sensor: false, address: location
+    google_api_key = process.env.HUBOT_DARK_SKY_GOOGLE_MAPS_GEOCODING_API_KEY || ''
+    googleurl = "https://maps.googleapis.com/maps/api/geocode/json"
+    q = sensor: false, address: location, key: google_api_key
     msg.http(googleurl)
       .query(q)
       .get() (err, res, body) ->
@@ -48,6 +50,7 @@ module.exports = (robot) ->
             msg.send response
         else
           msg.send "Couldn't find #{location}"
+          console.log("hubot-darksky google geocoding result: " + JSON.stringify(result))
 
 darkSkyMe = (msg, lat, lng, separator, cb) ->
   url = "https://api.darksky.net/forecast/#{process.env.HUBOT_DARK_SKY_API_KEY}/#{lat},#{lng}/?units=si"
