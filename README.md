@@ -17,6 +17,7 @@ Add **hubot-darksky** to your `external-scripts.json`:
 ## Configuration
 - `HUBOT_DARK_SKY_API_KEY` an api key from [darksky.net](https://darksky.net/dev)
 - `HUBOT_DARK_SKY_DEFAULT_LOCATION` if unset, `weather` commands without a location will be ignored
+- `HUBOT_DARK_SKY_GOOGLE_MAPS_GEOCODING_API_KEY` a [Google Maps Geocoding API Key](https://developers.google.com/maps/documentation/geocoding/get-api-key)
 - `HUBOT_DARK_SKY_SEPARATOR` a configurable line separator for responses.  defaults to "\n"
 
 ## Sample Interaction
