@@ -30,5 +30,5 @@ Coming week: No precipitation throughout the week.
 ```
 
 ## Sources
-[darksky.coffee from hubot-scripts](https://github.com/github/hubot-scripts/blob/master/src/scripts/darksky.coffee) by [kyleslattery](https://github.com/kyleslattery)
-[comment from hubot-darksky issues](https://github.com/hubot-scripts/hubot-darksky/issues/6#issuecomment-564621223) by [Nmasood](https://github.com/Nmasood)
+- [darksky.coffee from hubot-scripts](https://github.com/github/hubot-scripts/blob/master/src/scripts/darksky.coffee) by [kyleslattery](https://github.com/kyleslattery)
+- [comment from hubot-darksky issues](https://github.com/hubot-scripts/hubot-darksky/issues/6#issuecomment-564621223) by [Nmasood](https://github.com/Nmasood)
